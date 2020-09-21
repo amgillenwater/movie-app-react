@@ -6,6 +6,7 @@ import { Button, Form, Input, Wrapper } from './styled.js'
 const SearchBar = () => {
   const [userInput, setUserInput] = useState('')
   const [result, setResult] = useState()
+  const [count, setCount] = useState(0)
 
   // styled components
 

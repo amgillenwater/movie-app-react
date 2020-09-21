@@ -1,14 +1,15 @@
 import React from 'react'
 import MovieCard from './MovieCard'
+import { Header, Title } from './styled.js'
 
 function MovieResults ({ data }) {
   return (
     <>
-      <h1>Movie Results</h1>
+      <Title>Movie Results</Title>
       {!data
-        ? (<h1>No results found</h1>)
+        ? (<Header>No results found</Header>)
         : (<div>
-          <h1>Results:</h1>
+          <Header>Results:</Header>
           {/* loop over results and generate movie card here */}
 
           <br />
@@ -26,7 +27,7 @@ function MovieResults ({ data }) {
           }
           )}
 
-           </div>
+        </div>
         )}
     </>
   )
