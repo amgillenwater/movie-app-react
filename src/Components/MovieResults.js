@@ -5,7 +5,7 @@ function MovieResults () {
   return (
     <>
       <h1>Movie Results</h1>
-      //loop over results and generate movie card here
+      {/* loop over results and generate movie card here */}
       <MovieCard />
     </>
   )
