@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import MovieResults from './MovieResults'
 import { Button, Form, Input, Wrapper } from './styled.js'
 
 const SearchBar = () => {
@@ -13,7 +14,7 @@ const SearchBar = () => {
       e.preventDefault()
       const result = await axios
         .get(`https://api.themoviedb.org/3/search/movie?api_key=84ae90e18d1d61fd354d732747ae369e&query=${userInput}`)
-      setResult(result.results)
+      setResult(result.data.results)
     } catch (error) {
       console.error(error.message)
     }
@@ -30,7 +31,7 @@ const SearchBar = () => {
           <Button><i className='fas fa-search' /></Button>
         </Form>
       </Wrapper>
-
+      <MovieResults data={result} />
     </>
   )
 }

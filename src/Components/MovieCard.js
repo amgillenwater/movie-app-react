@@ -1,9 +1,12 @@
 import React from 'react'
 
-function MovieCard () {
+const MovieCard = props => {
+  const { key, title, overview, lang, rating, img } = props
+
   return (
-    <h1>MovieCard</h1>
-    // res.results, title: results.title, img: baseURL+ results.poster_path, rating: vote_average, id: results.id
+    <>
+      
+    </>
   )
 }
 
