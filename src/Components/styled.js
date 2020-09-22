@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Input = styled.input`
+    grid-area: search;
     flex-grow: 2;
     border: none;
     font-size: 1.2rem;
@@ -11,13 +12,17 @@ export const Input = styled.input`
 `
 
 export const Form = styled.form`
+    grid-area: search;
+    align-self: start;
+    justify-self: center;
     display: flex;
     width: 250px;
     min-height: 30px;
     flex-direction: row;
     border: 2px solid grey;
-    padding: 5px;
+    padding: 3px;
     border-radius: 20px;
+    margin: 20px;
 `
 export const Button = styled.button`
     border: none;
@@ -29,29 +34,26 @@ export const Button = styled.button`
     border-radius: 20px;
 `
 
-export const Wrapper = styled.div`
-    position: relative;
-    display: flex;
-    max-width: 100vw;
-    height: auto;
-    justify-content: center;
-    
-`
 export const Card = styled.div`
+    grid-area: main;
     background-color: white;
     margin: 15px;
     outline: 1px solid black;
-    display: flex;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     max-width: 90vw;
+    display: grid;
+    grid-template-columns: 20% 20% auto 20% 15%;
+    grid-template-rows: 15% 30% 20% 20% 15%;
 `
 export const Title = styled.h2`
     color: #000000;
     font-weight: 500;
     font-size: 2rem;
+    margin: 5px
 `
 export const Header = styled.h2`
+    grid-area: main;
     color: #000000;
     font-weight: 400;
     font-size: 1.5rem;
@@ -61,50 +63,49 @@ export const Circle = styled.div`
     text-align: center;
     color: #ffffff;
     font-weight: 300;
-    margin: 6px 0;
-    width: 40px;
-    height: 40px;
+    margin: 6px 6px;
+    min-width: 40px;
+    min-height: 40px;
     line-height: 40px;
     border-radius: 50%;
+    display: inline-block;
+`
+export const TextContainer = styled.div`
+  padding: 10px;
+  justify-items: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  text-align: left;
+`
+export const CircleContainer = styled.div`
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    justify-items: start;
 `
 export const Description = styled.p`
     color: #000000;
     font-weight: 300;
     font-size: 1.2rem;
+    margin: 10px;
+    text-align: left;
 `
 export const StyledImage = styled.img`
-    width: 30%;
-    margin: 10 px;
+    max-width: 250px;
+    grid-column-start: 4;
+    margin: 15px;
 `
 
 export const Nav = styled.div`
-  border-bottom: 1px solid lightgray;
-  margin-bottom: 15px;
-  max-width: 100vw;
+  grid-area: header;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-`
-
-export const NavHeader = styled.div`
-  max-width: 1010px;
   padding: 26px 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-`
-
-export const NavLeft = styled.div`
-  width: 33.333%;
   text-align: left;
 `
-
-export const NavCenter = styled.div`
-  width: 33.333%;
+export const Results = styled.div`
+  grid-area: main;
   text-align: center;
-`
-
-export const NavRight = styled.div`
-  width: 33.333%;
-  text-align: right;
 `

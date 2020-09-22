@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import MovieResults from './MovieResults'
-import { Button, Form, Input, Wrapper } from './styled.js'
+import { Button, Form, Input } from './styled.js'
 
 const SearchBar = () => {
   const [userInput, setUserInput] = useState('')
@@ -24,15 +24,13 @@ const SearchBar = () => {
 
   return (
     <>
-      <Wrapper>
-        <Form onSubmit={handleSubmit}>
-          <Input
-            label='Search' value={userInput}
-            onChange={e => setUserInput(e.target.value)}
-          />
-          <Button><i className='fas fa-search' /></Button>
-        </Form>
-      </Wrapper>
+      <Form onSubmit={handleSubmit}>
+        <Input
+          label='Search' value={userInput}
+          onChange={e => setUserInput(e.target.value)}
+        />
+        <Button><i className='fas fa-search' /></Button>
+      </Form>
       <MovieResults data={result} count={count} />
     </>
   )

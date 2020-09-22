@@ -1,16 +1,10 @@
 import React from 'react'
-import { Nav, NavHeader, NavCenter, NavRight, NavLeft, Title } from './styled.js'
+import { Nav, Title } from './styled.js'
 
 function Header () {
   return (
     <Nav>
-      <NavHeader>
-        <NavLeft>
-          <Title>TMDb Movie Search</Title>
-        </NavLeft>
-        <NavCenter />
-        <NavRight />
-      </NavHeader>
+      <Title>TMDb Movie Search</Title>
     </Nav>
   )
 }
