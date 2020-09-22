@@ -8,7 +8,7 @@ function MovieResults ({ data, count }) {
       {!data
         ? (
           <Results>
-            <Header>No results found</Header>
+            <Header>Please enter a movie title in the search box above.</Header>
           </Results>)
         : (
           <Results>

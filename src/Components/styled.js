@@ -22,7 +22,7 @@ export const Form = styled.form`
     border: 2px solid grey;
     padding: 3px;
     border-radius: 20px;
-    margin: 20px;
+    margin: 30px;
 `
 export const Button = styled.button`
     border: none;
@@ -111,5 +111,4 @@ export const Nav = styled.div`
 `
 export const Results = styled.div`
   grid-area: main;
-  text-align: center;
 `
