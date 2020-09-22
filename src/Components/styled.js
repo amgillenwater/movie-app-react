@@ -36,6 +36,7 @@ export const Button = styled.button`
 
 export const Card = styled.div`
     grid-area: main;
+    position: relative;
     background-color: white;
     margin: 15px;
     outline: 1px solid black;
@@ -95,6 +96,9 @@ export const Description = styled.p`
 `
 export const StyledImage = styled.img`
     max-width: 250px;
+    max-height: 250px;
+    height: auto;
+    position: relative;
     grid-column-start: 4;
     margin: 15px;
 `
