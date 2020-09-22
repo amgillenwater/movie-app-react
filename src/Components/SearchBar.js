@@ -16,6 +16,7 @@ const SearchBar = () => {
       const result = await axios
         .get(`https://api.themoviedb.org/3/search/movie?api_key=84ae90e18d1d61fd354d732747ae369e&query=${userInput}`)
       setResult(result.data.results)
+      setCount(result.data.total_results)
     } catch (error) {
       console.error(error.message)
     }
@@ -32,7 +33,7 @@ const SearchBar = () => {
           <Button><i className='fas fa-search' /></Button>
         </Form>
       </Wrapper>
-      <MovieResults data={result} />
+      <MovieResults data={result} count={count} />
     </>
   )
 }
